@@ -1,0 +1,5 @@
+CREATE TABLE 
+SHOW DATABASES
+SHOW TABLES
+USE "name_of_the_database"
+SOURCE "file_name" - push sql file to database that was already uploaded
