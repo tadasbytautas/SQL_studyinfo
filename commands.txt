@@ -1,5 +1,5 @@
-CREATE TABLE 
-SHOW DATABASES
-SHOW TABLES
-USE "name_of_the_database"
+CREATE TABLE - create new table 
+SHOW DATABASES - list all the databases
+SHOW TABLES - show tables of current databases
+USE "name_of_the_database" - switch to different database
 SOURCE "file_name" - push sql file to database that was already uploaded
