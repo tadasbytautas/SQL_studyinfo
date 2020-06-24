@@ -1,0 +1,8 @@
+Sakila database Exercises
+
+1. select * actor;
+2. select * from actor where first_name like '%john';
+3. select * from actor where last_name like 'neeson';
+4. select * from actor where actor_id%10=0;
+5. select * from film where film_id=100 \G;
+6. select * from film where rating='R' \G;
