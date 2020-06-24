@@ -17,3 +17,5 @@ select * from "table_name"
 insert into "table_name" (values) value (new_values)
 
 update "table_name" set new_value where ID
+
+delete from "table_name" where RECORD_ID;
