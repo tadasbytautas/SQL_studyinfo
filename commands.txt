@@ -13,6 +13,7 @@ ALTER TABLE table_name
 	DROP COLUMN column_name;
 
 select * from "table_name"
+select distinct 
 
 insert into "table_name" (values) value (new_values)
 
