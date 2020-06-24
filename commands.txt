@@ -11,3 +11,9 @@ ALTER TABLE table_name
 
 ALTER TABLE table_name
 	DROP COLUMN column_name;
+
+select * from "table_name"
+
+insert into "table_name" (values) value (new_values)
+
+update "table_name" set new_value where ID
