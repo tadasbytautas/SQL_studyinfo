@@ -10,7 +10,21 @@ Sakila database Exercises
 8. select * from film order by length limit 10 \G;
 9. select title from film;
 10.select * from film where special_features='Deleted Scenes' \G;
-11.select distinct last_name from actor;
+11.select last_name, count(last_name) from actor group by last_name having count(last_name)=1;
 12.select last_name, count(*) from actor group by last_name having count(*) >1;
-13.select last_name from actor group by last_name order by count(*) desc limit 1;
-14.
+13.select fa.actor_id, count(fa.actor_id), a.first_name, a.last_name from film_actor fa join actor a on fa.actor_id=a.actor_id group by fa.actor_id order by count(fa.actor_id) desc limit 1;
+14.select * from inventory where film_id=(select film_id from film where title='Academy Dinosour') and store_id=1;
+15.select return_date from rental where inventory_id=(select film_id from film where title='Academy Dinosour');
+16.select avg(length) from film;
+17.select avg(length), category from film_list group by category;
+18.select count(film_id) from film where description like '&Robot%';
+19.select title, length from film order by length desc limit 1;
+20.select count(release_year) from film where release_year=2010;
+21.select tittle from film_list where category = 'horror';
+22.select contact(first_name,' ', last_name) as full_name from staff where staff_id=1;
+23.select * nicer_but_slower_film_list where actors like '%Fred Costner%' \G;
+24.select inventory_id, film_id, store_id from inventory i join film_list fl on i.film_id=fl.fid where tittle="bucket brotherhood";
+	1.
+26.select concat(first_name,' ',last_name) as full_name from actor where last_name like '%son%';
+27.select c.name, count(c.name) from category c join film_category fc on c.category_id=fc.category_id group by c.name;
+28.select a.actor_id, a.first_name, count(a.actor_id) from actor a join film_actor fa on a.actor_id=fa.actor_id group by actor_id having count(a.actor_id) > 1;
