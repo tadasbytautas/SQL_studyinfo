@@ -1,0 +1,4 @@
+1. select count(name) from city where CountryCode='USA';
+2. select sum(population), avg(LifeExpectancy) from country where code='ARG';
+3. select name, lifeexpectancy from country where lifeexpectancy is not null order by lifeexpectancy desc limit 10;
+4. select id, c.name, countrycode from city c join country cr on c.id=cr.capital where countrycode='ESP';
